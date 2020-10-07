@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>User</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+      body{
+          background-color: white;
+      }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>USER TWEETS</h2>
+  <p>TWEETS USERNAME,TWEETS LINK,TWEETS TEXT</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>USERNAME</th>
+        <th>TWEET LINK</th>
+        <th>TWEET TEXT</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for tweet in tweets %}
+        <tr class="info">
+            <td>{{tweet.user.screen_name}}</td>
+            <td><a href="https://twitter.com/{{tweet.user.screen_name}}/status/{{tweet.id}}" target="blank">FEED LINK</a></td>
+            <td>{{tweet.text}}</td>
+          </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
