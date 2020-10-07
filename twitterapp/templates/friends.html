@@ -10,12 +10,15 @@
   <style>
       body{
     margin-top:20px;
-    background:#FAFAFA;    
+    background:#FAFAFA;   
+    background-image: url("https://media.istockphoto.com/photos/dark-black-and-blue-grungy-wall-background-for-display-or-montage-of-picture-id1150477705?k=6&m=1150477705&s=612x612&w=0&h=q0f-napJKrSFE3ETwopLe6ETDRXk50zv7hctci_-j4A=");
+    background-repeat: no-repeat;
+    background-size: cover; 
 }
 .people-nearby .google-maps{
   background: #f8f8f8;
   border-radius: 4px;
-  border: 1px solid #f1f2f2;
+  {% comment %} border: 1px solid #f1f2f2; {% endcomment %}
   padding: 20px;
   margin-bottom: 20px;
 }
@@ -28,16 +31,9 @@
 
 .people-nearby .nearby-user{
   padding: 20px 0;
-  border-top: 1px solid #f1f2f2;
-  border-bottom: 1px solid #f1f2f2;
   margin-bottom: 20px;
 }
 
-img.profile-photo-lg{
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
-}
   </style>
 </head>
 <body>
@@ -50,7 +46,7 @@ img.profile-photo-lg{
                   <form action={% url 'tweets' %}  method="POST">
                     {% csrf_token %}
                     <div class="nearby-user">
-                       <h1 style="font-family: Impact; color: blueviolet;">User Twitter Followers</h1>
+                       <h1 style="font-family: Times New Roman; color: White;"> Followers</h1>
                        <button style="background-color: #87CEEB; color: black;" class="btn btn-success pull-right">Get User Timeline</button>
                     </div>
                   </form>
@@ -60,16 +56,11 @@ img.profile-photo-lg{
                       
                     <div class="nearby-user">
                         <div class="row">
-                          <div class="col-md-2 col-sm-2">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="user" class="profile-photo-lg">
-                          </div>
                           <div class="col-md-7 col-sm-7">
-                            <h5><a href="#" class="profile-link">{{user}}</a></h5>
                             <input style="display: none;" type="text" class="form-control" id="email" placeholder="Enter Twitter Username" name="username" value={{user}}>
-                            <p>Friend</p>
                           </div>
-                          <div class="col-md-3 col-sm-3">
-                            <button class="btn btn-primary pull-right">Get Tweets</button>
+                          <div class="text-left">
+                            <button class="btn btn-primary">{{user}}</button>
                           </div>
                         </div>
                       </div>

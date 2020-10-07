@@ -10,28 +10,22 @@
   <style>
       body{
           background-color: white;
+           background-image: url("https://images8.alphacoders.com/473/thumb-1920-473471.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+          
       }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <h2>USER TWEETS</h2>
-  <p>TWEETS USERNAME,TWEETS LINK,TWEETS TEXT</p>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>USERNAME</th>
-        <th>TWEET LINK</th>
-        <th>TWEET TEXT</th>
-      </tr>
-    </thead>
+  <table class = "table table-hover">
     <tbody>
         {% for tweet in tweets %}
         <tr class="info">
             <td>{{tweet.user.screen_name}}</td>
-            <td><a href="https://twitter.com/{{tweet.user.screen_name}}/status/{{tweet.id}}" target="blank">FEED LINK</a></td>
-            <td>{{tweet.text}}</td>
+            <td><a href="https://twitter.com/{{tweet.user.screen_name}}/status/{{tweet.id}}" target="blank">{{tweet.text}}</a></td>
           </tr>
         {% endfor %}
     </tbody>
