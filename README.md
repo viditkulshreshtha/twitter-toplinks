@@ -73,7 +73,10 @@ To run the app locally, use
 ```sh
 python3 manage.py runserver
 ```
-
+For using the app hosted on heroku use
+```sh 
+https://vouch-toplinks.herokuapp.com/
+```
 
 <!-- CONTRIBUTING -->
 ## Contributing
