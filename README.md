@@ -72,7 +72,7 @@ python3 manage.py migrate
 To run the app locally, use 
 ```sh
 python3 manage.py runserver
-
+```
 
 
 <!-- CONTRIBUTING -->
